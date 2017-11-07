@@ -2,14 +2,14 @@
 
 require_once 'HTTP/Request2.php';
 
-$request = new HTTP_Request2('https://csweb01.csueastbay.edu/~ae4654/exercise3/readNameAndRespond');
+$request = new HTTP_Request2('https://csweb01.csueastbay.edu/~ae4654/exercise3/php/getMyNodeResults.php');
 $request->setMethod(HTTP_Request2::METHOD_POST)
     ->addPostParameter('name', 'CS3520');
 
 // ######### To Fix the SSL issue ###########
 $request->setConfig(array(
-    'ssl_verify_peer'   => FALSE,
-    'ssl_verify_host'   => FALSE
+    'ssl_verify_peer'   => TRUE,
+    'ssl_verify_host'   => TRUE
 ));
 // ########################################
 
