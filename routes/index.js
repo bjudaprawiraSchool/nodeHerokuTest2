@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
+//LOAD the various controllers
+//var controllerMain = require('../controllers/main');   //this will load the main controller file
+var controllerMongoCollection = require('../controllers/database.js'); //load controller code dealing with database mongodb and Routes collection
 
 //########################################
 //to process data sent in on request need body-parser module
@@ -12,7 +15,7 @@ router.use(bodyParser.json()); // for parsing application/json
 router.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencode
 //#########################################
 
-
+router.get('/getAllOrders', controllerMongoCollection.getAllOrders);
 
 //now processing post
 router.post('/readNameAndRespond', function(req, res, next) {
@@ -22,8 +25,8 @@ router.post('/readNameAndRespond', function(req, res, next) {
 });
 
  //GET home page.
-router.get('/', function(req, res, next) {
+/*router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-module.exports = router;
+module.exports = router;*/
