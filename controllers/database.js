@@ -1,5 +1,5 @@
 var mongodb = require('mongodb');
-var mongoDBURI = process.env.MONGODB_URI || 'mongodb://heroku_6rdr5zwb:brave123@ds259105.mlab.com:59105/heroku_6rdr5zwb';
+var mongoDBURI = process.env.MONGODB_URI || 'mongodb://newUser:brave123@ds259105.mlab.com:59105/heroku_6rdr5zwb';
 
 /** getAllRoutes controller logic that current does model logic too -connects to Mongo database and
  * queries the Routes collection to retrieve all the routes and build the output usig the
