@@ -3,7 +3,7 @@ var router = express.Router();
 
 //LOAD the various controllers
 //var controllerMain = require('../controllers/main');   //this will load the main controller file
-var controllerMongoCollection = require('../controllers/database.js'); //load controller code dealing with database mongodb and Routes collection
+var controllerMongoCollection = require('../controllers/database'); //load controller code dealing with database mongodb and Routes collection
 
 //########################################
 //to process data sent in on request need body-parser module
