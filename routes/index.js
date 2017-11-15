@@ -25,8 +25,8 @@ router.post('/readNameAndRespond', function(req, res, next) {
 });
 
  //GET home page.
-/*router.get('/', function(req, res, next) {
+router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-module.exports = router;*/
+module.exports = router;
